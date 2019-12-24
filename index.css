@@ -18,6 +18,12 @@
   --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.3);
 
   --line: 1px solid var(--color-grey-light-4);
+
+  --bp-largest: 75em;
+  --bp-large: 68.75em;
+  --bp-medium: 56.25em;
+  --bp-small: 37.5em;
+  --bp-smallest: 31.25em;
 }
 
 * {
@@ -31,6 +37,24 @@ html {
   font-size: 62.5%;
 }
 
+@media only screen and (max-width: 68.75em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  html {
+    font-size: 30%;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
 body {
   height: 100vh;
   align-items: center;
@@ -39,14 +63,14 @@ body {
 
 h1 {
   text-align: center;
-  padding: 80px;
+  padding: 8rem;
   font-size: 5rem;
   text-transform: uppercase;
   font-weight: 700;
   color: var(--color-grey-dark-5);
 
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.69),
-    -2px -2px 5px rgba(152, 152, 152, 0.5);
+  text-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.69),
+    -0.2rem -0.2rem 0.5rem rgba(152, 152, 152, 0.5);
 }
 
 .container {
@@ -56,22 +80,22 @@ h1 {
 
 .box {
   background-color: var(--color-grey-dark-5);
-  border-radius: 10px;
+  border-radius: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 20px;
+  margin: 0 2rem;
   font-size: 15em;
   color: #64dd17;
-  text-shadow: 0 0 72px rgba(100, 221, 23, 0.85);
+  text-shadow: 0 0 7.2rem rgba(100, 221, 23, 0.85);
   border: 1px solid var(--color-grey-dark-1);
-  box-shadow: 6px 6px 26px rgba(0, 0, 0, 0.8),
-    -6px -6px 16px rgba(152, 152, 152, 0.35);
+  box-shadow: 0.6rem 0.6rem 2.6rem rgba(0, 0, 0, 0.8),
+    -0.6rem -0.6rem 1.6rem rgba(152, 152, 152, 0.35);
 }
 
 .time:last-child div {
   color: #039be5;
-  text-shadow: 0 0 72px rgba(3, 155, 229, 0.85);
+  text-shadow: 0 0 7.2rem rgba(3, 155, 229, 0.85);
 }
 
 .box:last-child {
@@ -82,12 +106,12 @@ h1 {
 }
 
 .box-big {
-  width: 200px;
-  height: 200px;
-  margin-bottom: 15px;
+  width: 20rem;
+  height: 20rem;
+  margin-bottom: 1.5rem;
 }
 
 .box-small {
-  width: 200px;
-  height: 50px;
+  width: 20rem;
+  height: 5rem;
 }
